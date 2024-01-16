@@ -1,5 +1,5 @@
 # DS Lab
-#Applicaation ScreenShots
+#Application ScreenShots
 
 
 ![Event1](https://github.com/rijwan-uddin/DS-Lab-app/assets/96045123/6991b816-a341-4305-b61b-cab7a4c1c267)
