@@ -29,13 +29,15 @@ class _EventState extends State<Event> {
             ),
             Image.asset(
               "assets/diu.png",
-              height: 100,
-              width: 100,
+              height: 50,
+              width: 70,
             ),
             InkWell(
               onTap: () {},
               child: Image.asset(
                 "assets/notification.gif",
+                height: 40,
+                width: 20,
                 scale: 2,
               ),
             )
