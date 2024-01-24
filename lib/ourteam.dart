@@ -529,7 +529,7 @@ class _ourTeamState extends State<ourTeam> {
               ],
             ),
           ),
-   ///CONTACT US
+   ///Community
           Container(
             height: 150,
             width: 300,
@@ -563,9 +563,7 @@ class _ourTeamState extends State<ourTeam> {
                   ),
                 ),
                 InkWell(
-                  onTap: () {Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => Event()));
+                  onTap: () {
 
                   },
                   child: const Text(
@@ -594,7 +592,7 @@ class _ourTeamState extends State<ourTeam> {
             ),
           ),
 
-
+          ///CONTACT US
           Container(
             height: 150,
             width: 300,
