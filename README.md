@@ -20,6 +20,6 @@
 
 ![our team 3](https://github.com/rijwan-uddin/DS-Lab-app/assets/96045123/0c2855fb-c03a-448a-b719-435caa92d69a)
 
-
+Responsive Design.
 
 
