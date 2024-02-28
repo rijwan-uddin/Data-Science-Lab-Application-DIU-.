@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'eventtimeline.dart';
+import 'upEvents.dart';
 class Event extends StatefulWidget {
   const Event({super.key});
 
@@ -15,35 +16,36 @@ class _EventState extends State<Event> {
       backgroundColor: const Color.fromARGB(255, 32, 72, 149),
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(50),
-        child: AppBar(
+        child:  AppBar(
           elevation: 0,
           backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+
           actions: [
             Image.asset(
               'assets/ds.png',
+
               height: 100,
               width: 100,
             ),
             SizedBox(
-              width: MediaQuery.of(context).size.width / 2,
+              width: MediaQuery.of(context).size.width /2,
             ),
             Image.asset(
               "assets/diu.png",
-              height: 50,
-              width: 70,
+              height: 100,
+              width: 100,
             ),
             InkWell(
               onTap: () {},
               child: Image.asset(
                 "assets/notification.gif",
-                height: 40,
-                width: 20,
                 scale: 2,
               ),
             )
           ],
         ),
       ),
+
       body: ListView(
         children: [
 
@@ -80,12 +82,20 @@ class _EventState extends State<Event> {
           ),
           // Add the curved shape container
           CurvedContainer(),
-
-
           ContainerWithLineevent(),
 
 
+
+
+
+
+
+
           SizedBox(height: 20.0),
+
+
+
+
           Container(
             height: 100,
             width: 100,
@@ -106,9 +116,6 @@ class _EventState extends State<Event> {
                       //color: Color(0xFFE6E6EE), colorBlendMode: BlendMode.modulate,
                       alignment: Alignment.center,
                     ),
-
-
-
                   ],
                 ),
               ],
