@@ -232,35 +232,39 @@ class ContainerWithLineevent extends StatelessWidget {
         SizedBox(height: 20.0),
                                           ///UP EVENTS
         Container(
-          height: 50,
-          width: 1000,
-
+          height: 50, // Adjust height as needed
+          width: 400,
           decoration: BoxDecoration(
-            color: Color.fromARGB(255, 32, 72, 149),
-
+            borderRadius: BorderRadius.circular(10), // Added border radius
+            image: DecorationImage(
+              image: AssetImage('assets/vin.jpg'), // Replace 'assets/vin.jpg' with your vintage texture image path
+              fit: BoxFit.cover,
+            ),
           ),
           child: Container(
-
-
+            alignment: Alignment.center,
             child: Text(
               'Upcoming Events',
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontFamily: "Allerta",
-                color: Colors.greenAccent,
-                fontSize: 20.0,
-                fontWeight: FontWeight.bold, // for better 3D effect
+                color: Color.fromARGB(255, 255, 255, 255), // White text color
+                fontSize: 36.0, // Increased font size for better visibility
+                fontWeight: FontWeight.bold,
                 shadows: [
                   Shadow(
                     color: Colors.black.withOpacity(0.5),
-                    blurRadius: 3,
-                    offset: Offset(0, 2), // changes position of shadow
+                    blurRadius: 5,
+                    offset: Offset(0, 5), // Increased shadow offset for depth effect
                   ),
                 ],
               ),
             ),
           ),
         ),
+
+
+
 
 
         SizedBox(height: 20.0),
@@ -452,11 +456,9 @@ class ContainerWithLineevent extends StatelessWidget {
 
       ],
     );
-
-
-
-
   }
 }
 
 //Create the time line here
+
+

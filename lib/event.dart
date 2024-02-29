@@ -54,25 +54,38 @@ class _EventState extends State<Event> {
 
 
         children: [
+          SizedBox(height: 5.0),
           Container(
             child: Padding(
               padding: const EdgeInsets.all(0),
               child: Container(
                 height: 100,
-                width: 200, // Adjusted width to make it rectangular
+                width: 200,
                 decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 255, 255, 255),
-                  borderRadius: BorderRadius.circular(0.0), // Adjust the radius to your preference
+                  borderRadius: BorderRadius.circular(25.0),
+                  gradient: const LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    colors: [Colors.blue, Colors.green], // Adjust gradient colors as needed
+                  ),
+                  boxShadow: const [
+                    BoxShadow(
+                      color: Colors.black12,
+                      blurRadius: 10.0,
+                      offset: Offset(3.0, 3.0),
+                    ),
+                  ],
                 ),
                 child: Transform.translate(
-                  offset: Offset(0.8 * 20, 0.8 * 20), // Adjust DPI to your actual device
+                  offset: Offset(0.8 * 20, 0.8 * 20),
                   child: const Text(
                     'Upcoming Events',
                     textAlign: TextAlign.left,
                     style: TextStyle(
-                      color: Colors.green,
+                      color: Colors.white, // Change text color to contrast with gradient
                       shadows: [
                         Shadow(
+
                           color: Colors.black12,
                           blurRadius: 4.0,
                           offset: Offset(3.0, 3.0),
@@ -85,6 +98,7 @@ class _EventState extends State<Event> {
               ),
             ),
           ),
+
 
 
 
@@ -525,9 +539,9 @@ class CurvePainter extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     Paint paint = Paint()..color = Colors.white; // White background
     Path path = Path()
-      ..lineTo(0, size.height * 0.66)
-      ..quadraticBezierTo(size.width /4, size.height, size.width, size.height * 1.6)
-      ..lineTo(size.width, 0)
+      ..lineTo(20, size.height * 1.50)
+      ..quadraticBezierTo(size.width /2, size.height, size.width, size.height * 1.5)
+      ..lineTo(size.width, 30)
       ..close();
 
     canvas.drawPath(path, paint);

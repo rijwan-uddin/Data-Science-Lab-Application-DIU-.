@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'event.dart';
 import 'dart:ui' as ui;
 
+
 class ourTeam extends StatefulWidget {
   const ourTeam({super.key});
 
@@ -14,9 +15,11 @@ class _ourTeamState extends State<ourTeam> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 32, 72, 149),
+
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(50),
-        child: AppBar(
+        child:  AppBar(
+
           elevation: 0,
           backgroundColor: const Color.fromARGB(255, 255, 255, 255),
 
@@ -43,30 +46,41 @@ class _ourTeamState extends State<ourTeam> {
               ),
             )
           ],
+
         ),
       ),
-
-
-
-
-
-
       body: ListView(
         children: [
+          SizedBox(height: 10),
           Container(
-              child: Padding(
-            padding: const EdgeInsets.all(0),
+            child: Padding(
+              padding: const EdgeInsets.all(0),
               child: Container(
                 height: 100,
                 width: 100,
-                color: const Color.fromARGB(255, 255, 255, 255),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(20), // Adjust the radius as needed
+                  gradient: const LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    colors: [Colors.blue, Colors.green], // Adjust gradient colors
+                  ),
+                  boxShadow: const [
+                    BoxShadow(
+                      color: Colors.black12,
+                      blurRadius: 10.0,
+                      offset: Offset(3.0, 3.0),
+                    ),
+                  ],
+                ),
                 child: Transform.translate(
                   offset: const Offset(0.8 * 20, 0.8 * 20), // Adjust DPI to your actual device
                   child: const Text(
                     'Our Team',
                     textAlign: TextAlign.left,
                     style: TextStyle(
-                      color: Colors.green,
+                      color: Colors.white, // Change text color
                       shadows: [
                         Shadow(
                           color: Colors.black12,
@@ -79,11 +93,8 @@ class _ourTeamState extends State<ourTeam> {
                   ),
                 ),
               ),
-          )
+            ),
           ),
-
-
-
 
           Container(
             height: 512,
@@ -144,9 +155,6 @@ class _ourTeamState extends State<ourTeam> {
               ],
             ),
           ),
-
-
-
           Container(
             height: 512,
             width: 322,
@@ -385,18 +393,18 @@ class _ourTeamState extends State<ourTeam> {
                               ],
                             ),
                           ),
-                          const SizedBox(width: 12), // Adjust the spacing between items
+                          const SizedBox(width: 12),
                           SizedBox(
-                            width: 150, // Adjust width as needed
+                            width: 150,
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 ClipRRect(
-                                  borderRadius: BorderRadius.circular(8.0), // Adjust the border radius as needed
+                                  borderRadius: BorderRadius.circular(8.0),
                                   child: Image.asset(
-                                    'assets/F2.jpg', // Replace with your image asset path
-                                    width: 180, // Keep image width constant
-                                    height: 140, // Keep image height constant
+                                    'assets/F2.jpg',
+                                    width: 180,
+                                    height: 140,
                                     fit: BoxFit.cover,
                                   ),
                                 ),
@@ -509,7 +517,7 @@ class _ourTeamState extends State<ourTeam> {
                                   ),
                                 ),
                                 const Text(
-                                  "Assistant Professor",
+                                  "Lecturer",
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                     color: Colors.white,
@@ -557,8 +565,8 @@ class _ourTeamState extends State<ourTeam> {
               ),
               SizedBox(height: 00), // Adjust the height of SizedBox to reduce the gap
               Container(
-                height: 312,
-                width: 222,
+                height: 600,
+                width: 450,
                 padding: const EdgeInsets.all(0),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(0.0),
@@ -567,13 +575,24 @@ class _ourTeamState extends State<ourTeam> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+
                     ClipRRect(
 
                       child: Image.asset(
-                        'assets/t1.jpg',
-                       height: 250,
+                        'assets/T2.jpeg',
                         width: 300,
-                        fit: BoxFit.cover,
+                        height: 240,
+                        //fit: BoxFit.cover,
+                      ),
+                    ),
+                    SizedBox(height: 10),
+                    ClipRRect(
+
+                      child: Image.asset(
+                        'assets/T3.jpeg',
+                        width: 300,
+                        height: 200,
+                        //fit: BoxFit.cover,
                       ),
                     ),
                   ],
@@ -583,349 +602,305 @@ class _ourTeamState extends State<ourTeam> {
           ),
 
 
-
-          ///footer
-          Container(
-            height: 100,
-            width: 100,
-            padding: const EdgeInsets.all(12.0),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(100.0),
-              color: const Color.fromARGB(255, 32, 72, 149),
-            ),
-            child: const Column(
-              children: [
-                Row(
-
-                ),
-                Text(
-                  "We are a team of out-of-the-box thinkers, "
-                      "with deep expertise in analytics. "
-                      "Our research aims to make sense of large amounts of data.",
-                  textAlign: TextAlign.justify,
-                  style: TextStyle(
-                    shadows: [
-                      Shadow(
-                        color: Colors.black,
-                        blurRadius: 1.0,
-                        offset: Offset(3.0, 3.0),
-                      ),
-                    ],
-                    color: Colors.white,
-                    fontSize: 15,
-                    fontStyle: FontStyle.normal,
-                  ),
-                ),
-              ],
-            ),
-          ),
-
-
-          ///YOUTUBE,FB,GOOGLE SECTION
-          Container(
-            height: 50,
-            width: 50,
-            padding: const EdgeInsets.all(12.0),
-            decoration: const BoxDecoration(
-              color: Color.fromARGB(255, 32, 72, 149),
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                InkWell(
-                  onTap: () {
-
-                  },
-                  child: Image.asset(
-                    'assets/fb.png',
-                    height: 25,
-                    width: 19,
-                  ),
-                ),
-                const SizedBox(width: 10),
-                InkWell(
-                  onTap: () {
-
-                  },
-                  child: Image.asset(
-                    'assets/google.png',
-                    height: 25,
-                    width: 25,
-                  ),
-                ),
-                const SizedBox(width: 10),
-                InkWell(
-                  onTap: () {
-
-                  },
-                  child: Image.asset(
-                    'assets/youtube.png',
-                    height: 24,
-                    width: 28,
-                    scale: 2,
-                  ),
-                ),
-              ],
-            ),
-          ),
-
-          ///SERVICES SECTION
-
-          Container(
-            height: 150,
-            width: 300,
-            padding: const EdgeInsets.all(12.0),
-            decoration: const BoxDecoration(
-              color: Color.fromARGB(255, 32, 72, 149),
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Text(
-                  "Services",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 24,
-                    fontWeight: FontWeight.w400,
-                  ),
-                ),
-                SizedBox(height: 10),
-                InkWell(
-                  onTap: () {
-
-                  },
-                  child: const Text(
-                    "Data science",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 15,
-                      fontWeight: FontWeight.w200,
-                    ),
-                  ),
-                ),
-                InkWell(
-                  onTap: () {
-
-                  },
-                  child: const Text(
-                    "Machine learning",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 15,
-                      fontWeight: FontWeight.w200,
-                    ),
-                  ),
-                ),
-                InkWell(
-                  onTap: () {
-
-                  },
-                  child: const Text(
-                    "Big Data",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 15,
-                      fontWeight: FontWeight.w200,
-                    ),
-                  ),
-                ),
-                InkWell(
-                  onTap: () {
-
-                  },
-                  child: const Text(
-                    "Deep learning",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 15,
-                      fontWeight: FontWeight.w200,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          ///CONTACT US
-          Container(
-            height: 150,
-            width: 300,
-            padding: const EdgeInsets.all(12.0),
-            decoration: const BoxDecoration(
-              color: Color.fromARGB(255, 32, 72, 149),
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Text(
-                  "Community",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 24,
-                    fontWeight: FontWeight.w400,
-                  ),
-                ),
-                const SizedBox(height: 10),
-                InkWell(
-                  onTap: () {
-
-                  },
-                  child: const Text(
-                    "Our Services",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 15,
-                      fontWeight: FontWeight.w200,
-                    ),
-                  ),
-                ),
-                InkWell(
-                  onTap: () {Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => Event()));
-
-                  },
-                  child: const Text(
-                    "Documentation",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 15,
-                      fontWeight: FontWeight.w200,
-                    ),
-                  ),
-                ),
-                InkWell(
-                  onTap: () {
-
-                  },
-                  child: const Text(
-                    "What We Do?",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 15,
-                      fontWeight: FontWeight.w200,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-
-
-          Container(
-            height: 150,
-            width: 300,
-            padding: const EdgeInsets.all(12.0),
-            decoration: const BoxDecoration(
-              color: Color.fromARGB(255, 32, 72, 149),
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Text(
-                  "Contact Us",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 24,
-                    fontWeight: FontWeight.w400,
-                  ),
-                ),
-                SizedBox(height: 10),
-                InkWell(
-                  onTap: () {
-
-                  },
-                  child: const Text(
-                    "Daffodil Smart City, Ashulia, Dhaka",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 15,
-                      fontWeight: FontWeight.w200,
-                    ),
-                  ),
-                ),
-                InkWell(
-                  onTap: () {
-                    // Handle the email button tap
-                  },
-                  child: const Text(
-                    "Email: arman.swe@diu.edu.bd",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 15,
-                      fontWeight: FontWeight.w200,
-                    ),
-                  ),
-                ),
-                InkWell(
-                  onTap: () {
-
-                  },
-                  child: const Text(
-                    "Phone: +880-167338289",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 15,
-                      fontWeight: FontWeight.w200,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Container(
-            height: 50,
-            width: 100,
-            padding: const EdgeInsets.all(12.0),
-            decoration: const BoxDecoration(
-              color: Color.fromARGB(255, 32, 72, 149),
-            ),
-            child: const Column(
-              children: [
-                Divider(
-                  height: 1,
-                  color: Colors.black,
-                ),
-              ],
-            ),
-          ),
-
-
-
-
-          Container(
-            height: 100,
-            width: 100,
-            padding: const EdgeInsets.all(12.0),
-            decoration: const BoxDecoration(
-              color:Color.fromARGB(255, 32, 72, 149),
-            ),
-            child: const Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  "© 2022 All Rights Reserved By",
-                  style: TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                Text(
-                  "Daffodil International University",
-                  style: TextStyle(
-                    fontSize: 14,
-                  ),
-                ),
-              ],
-            ),
-          ),
-
-
+          HeaderContainer(),
+          SocialMediaContainer(),
+          ServicesContainer(),
+          ContactContainer(),
+          DividerContainer(),
+          FooterContainer(),
         ],
-
       ),
-
     );
+  }
+}
+class HeaderContainer extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 100,
+      width: 100,
+      padding: const EdgeInsets.all(12.0),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(100.0),
+        color: const Color.fromARGB(255, 32, 72, 149),
+      ),
+      child: const Column(
+        children: [
+          Row(),
+          Text(
+            "We are a team of out-of-the-box thinkers, "
+                "with deep expertise in analytics. "
+                "Our research aims to make sense of large amounts of data.",
+            textAlign: TextAlign.justify,
+            style: TextStyle(
+              shadows: [
+                Shadow(
+                  color: Colors.black,
+                  blurRadius: 1.0,
+                  offset: Offset(3.0, 3.0),
+                ),
+              ],
+              color: Colors.white,
+              fontSize: 15,
+              fontStyle: FontStyle.normal,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
 
+class SocialMediaContainer extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 50,
+      width: 50,
+      padding: const EdgeInsets.all(12.0),
+      decoration: const BoxDecoration(
+        color: Color.fromARGB(255, 32, 72, 149),
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          InkWell(
+            onTap: () {
+              // Handle Facebook tap
+            },
+            child: Image.asset(
+              'assets/fb.png',
+              height: 25,
+              width: 19,
+            ),
+          ),
+          const SizedBox(width: 10),
+          InkWell(
+            onTap: () {
+              // Handle Google tap
+            },
+            child: Image.asset(
+              'assets/google.png',
+              height: 25,
+              width: 25,
+            ),
+          ),
+          const SizedBox(width: 10),
+          InkWell(
+            onTap: () {
+              // Handle YouTube tap
+            },
+            child: Image.asset(
+              'assets/youtube.png',
+              height: 24,
+              width: 28,
+              scale: 2,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class ServicesContainer extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 150,
+      width: 300,
+      padding: const EdgeInsets.all(12.0),
+      decoration: const BoxDecoration(
+        color: Color.fromARGB(255, 32, 72, 149),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Text(
+            "Services",
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 24,
+              fontWeight: FontWeight.w400,
+            ),
+          ),
+          SizedBox(height: 10),
+          InkWell(
+            onTap: () {
+              // Handle Data Science tap
+            },
+            child: const Text(
+              "Data science",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 15,
+                fontWeight: FontWeight.w200,
+              ),
+            ),
+          ),
+          InkWell(
+            onTap: () {
+              // Handle Machine Learning tap
+            },
+            child: const Text(
+              "Machine learning",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 15,
+                fontWeight: FontWeight.w200,
+              ),
+            ),
+          ),
+          InkWell(
+            onTap: () {
+              // Handle Big Data tap
+            },
+            child: const Text(
+              "Big Data",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 15,
+                fontWeight: FontWeight.w200,
+              ),
+            ),
+          ),
+          InkWell(
+            onTap: () {
+              // Handle Deep Learning tap
+            },
+            child: const Text(
+              "Deep learning",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 15,
+                fontWeight: FontWeight.w200,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class ContactContainer extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 150,
+      width: 300,
+      padding: const EdgeInsets.all(12.0),
+      decoration: const BoxDecoration(
+        color: Color.fromARGB(255, 32, 72, 149),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Text(
+            "Contact Us",
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 24,
+              fontWeight: FontWeight.w400,
+            ),
+          ),
+          SizedBox(height: 10),
+          InkWell(
+            onTap: () {
+              // Handle address tap
+            },
+            child: const Text(
+              "Daffodil Smart City, Ashulia, Dhaka",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 15,
+                fontWeight: FontWeight.w200,
+              ),
+            ),
+          ),
+          InkWell(
+            onTap: () {
+              // Handle email tap
+            },
+            child: const Text(
+              "Email: arman.swe@diu.edu.bd",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 15,
+                fontWeight: FontWeight.w200,
+              ),
+            ),
+          ),
+          InkWell(
+            onTap: () {
+              // Handle phone tap
+            },
+            child: const Text(
+              "Phone: +880-167338289",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 15,
+                fontWeight: FontWeight.w200,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class DividerContainer extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 50,
+      width: 100,
+      padding: const EdgeInsets.all(12.0),
+      decoration: const BoxDecoration(
+        color: Color.fromARGB(255, 32, 72, 149),
+      ),
+      child: const Column(
+        children: [
+          Divider(
+            height: 1,
+            color: Colors.black,
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class FooterContainer extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 100,
+      width: 100,
+      padding: const EdgeInsets.all(12.0),
+      decoration: const BoxDecoration(
+        color: Color.fromARGB(255, 32, 72, 149),
+      ),
+      child: const Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            "© 2022 All Rights Reserved By",
+            style: TextStyle(
+              fontSize: 14,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          Text(
+            "Daffodil International University",
+            style: TextStyle(
+              fontSize: 14,
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
