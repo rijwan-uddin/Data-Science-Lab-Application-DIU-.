@@ -61,7 +61,7 @@ class _ourTeamState extends State<ourTeam> {
                 width: 100,
                 color: const Color.fromARGB(255, 255, 255, 255),
                 child: Transform.translate(
-                  offset: Offset(0.8 * 20, 0.8 * 20), // Adjust DPI to your actual device
+                  offset: const Offset(0.8 * 20, 0.8 * 20), // Adjust DPI to your actual device
                   child: const Text(
                     'Our Team',
                     textAlign: TextAlign.left,
@@ -200,27 +200,6 @@ class _ourTeamState extends State<ourTeam> {
             ),
           ),
 
-
-          /*Container(
-            height: 512,
-            width: 322,
-            padding: const EdgeInsets.all(12.0),
-
-            decoration: BoxDecoration(
-
-                borderRadius: BorderRadius.circular(100.0),
-                color: const Color.fromARGB(255, 32, 72, 149)
-
-            ),
-            child: const Text("Chief Advisor",
-              textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 25,
-                  fontFamily: "Allerta",
-                ),
-            ),
-
-          ),*/
        //3rd
           Container(
             height: 512,
@@ -275,13 +254,13 @@ class _ourTeamState extends State<ourTeam> {
             ),
           ),
 
-
+     // 4th container
           Container(
             height: 512,
             width: 322,
             padding: const EdgeInsets.all(12.0),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(100.0),
+              borderRadius: BorderRadius.circular(0.0),
               color: const Color.fromARGB(255, 32, 72, 149),
             ),
             child: Column(
@@ -298,11 +277,11 @@ class _ourTeamState extends State<ourTeam> {
                 ),
                 const SizedBox(height: 10),
                 ClipRRect(
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(0.0),
                   child: Image.asset(
                     'assets/sohelsir.jpg',
-                    width: 300,
-                    height: 400,
+                    width: 400,
+                    height: 240,
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -329,43 +308,283 @@ class _ourTeamState extends State<ourTeam> {
             ),
           ),
 
-
-
-          //DSLAB logo designs
+          ///create horizontal list view container which fit two images besidely
           Container(
-            height: 100,
-            width: 100,
-            padding: const EdgeInsets.all(12.0),
-            decoration: const BoxDecoration(
-
-              color: Colors.white,
+            padding: const EdgeInsets.all(0),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(8.0),
             ),
-            child: Column(
-              children: [
-                Row(
+            child: const Text(
+              "Our Expert Faculties",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                shadows: [
+                  Shadow(
+                    color: Colors.black12,
+                    blurRadius: 1.0,
+                    offset: Offset(3.0, 3.0),
+                  ),
+                ],
+                color: Colors.white,
+                fontSize: 25,
+                fontFamily: "Allerta",
+              ),
+            ),
+          ),
+
+          Center(
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Container(
+                width: MediaQuery.of(context).size.width * 0.8, // Adjust container width as needed
+                height: 250, // Adjust the height as needed
+                padding: const EdgeInsets.all(16.0), // Adjust padding as needed
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8.0), // Adjust the border radius as needed
+                  color: const Color.fromARGB(255, 32, 72, 149),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Image.asset(
-                      'assets/ds.png',
-                      width: 186,
-                      height:75,
-                      //fit: BoxFit.cover,
-                      //color: Color(0xFFE6E6EE), colorBlendMode: BlendMode.modulate,
-                      alignment: Alignment.center,
+                    Expanded(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            width: 150, // Adjust width as needed
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                ClipRRect(
+                                  borderRadius: BorderRadius.circular(8.0), // Adjust the border radius as needed
+                                  child: Image.asset(
+                                    'assets/F1.jpg', // Replace with your image asset path
+                                    width: 180, // Keep image width constant
+                                    height: 140, // Keep image height constant
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                                const Text(
+                                  "Ms. Nusrat Jahan",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 12,
+                                    fontFamily: "Allerta",
+                                  ),
+                                ),
+                                const Text(
+                                  "Assistant Professor",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 10,
+                                    fontFamily: "Allerta",
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          const SizedBox(width: 12), // Adjust the spacing between items
+                          SizedBox(
+                            width: 150, // Adjust width as needed
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                ClipRRect(
+                                  borderRadius: BorderRadius.circular(8.0), // Adjust the border radius as needed
+                                  child: Image.asset(
+                                    'assets/F2.jpg', // Replace with your image asset path
+                                    width: 180, // Keep image width constant
+                                    height: 140, // Keep image height constant
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                                const Text(
+                                  "Afsana Begum",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 10,
+                                    fontFamily: "Allerta",
+                                  ),
+                                ),
+                                const Text(
+                                  "Assistant Professor",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 10,
+                                    fontFamily: "Allerta",
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          // Add more SizedBox with images and names if needed
+                        ],
+                      ),
                     ),
-
-
-
                   ],
                 ),
-              ],
+              ),
+            ),
+          ),
+
+          Center(
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Container(
+                width: MediaQuery.of(context).size.width * 0.8, // Adjust container width as needed
+                height: 250, // Adjust the height as needed
+                padding: const EdgeInsets.all(16.0), // Adjust padding as needed
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8.0), // Adjust the border radius as needed
+                  color: const Color.fromARGB(255, 32, 72, 149),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Expanded(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            width: 150, // Adjust width as needed
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                ClipRRect(
+                                  borderRadius: BorderRadius.circular(8.0), // Adjust the border radius as needed
+                                  child: Image.asset(
+                                    'assets/F3.jpg', // Replace with your image asset path
+                                    width: 180, // Keep image width constant
+                                    height: 140, // Keep image height constant
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                                const Text(
+                                  "Ms. Farzana Sadia",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 12,
+                                    fontFamily: "Allerta",
+                                  ),
+                                ),
+                                const Text(
+                                  "Assistant Professor",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 10,
+                                    fontFamily: "Allerta",
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          const SizedBox(width: 12), // Adjust the spacing between items
+                          SizedBox(
+                            width: 150, // Adjust width as needed
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                ClipRRect(
+                                  borderRadius: BorderRadius.circular(8.0), // Adjust the border radius as needed
+                                  child: Image.asset(
+                                    'assets/F4.jpg', // Replace with your image asset path
+                                    width: 180, // Keep image width constant
+                                    height: 140, // Keep image height constant
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                                const Text(
+                                  "Mr. Musabbir Hasan Sammak",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 10,
+                                    fontFamily: "Allerta",
+                                  ),
+                                ),
+                                const Text(
+                                  "Assistant Professor",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 10,
+                                    fontFamily: "Allerta",
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          // Add more SizedBox with images and names if needed
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ),
           ),
 
 
+          Column(
+            children: [
+              Container(
+                padding: const EdgeInsets.all(0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8.0),
+                ),
+                child: const Text(
+                  "Our Expert Lab Students",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    shadows: [
+                      Shadow(
+                        color: Colors.black12,
+                        blurRadius: 1.0,
+                        offset: Offset(3.0, 3.0),
+                      ),
+                    ],
+                    color: Colors.white,
+                    fontSize: 25,
+                    fontFamily: "Allerta",
+                  ),
+                ),
+              ),
+              SizedBox(height: 00), // Adjust the height of SizedBox to reduce the gap
+              Container(
+                height: 312,
+                width: 222,
+                padding: const EdgeInsets.all(0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(0.0),
+                  color: const Color.fromARGB(255, 32, 72, 149),
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ClipRRect(
+
+                      child: Image.asset(
+                        'assets/t1.jpg',
+                       height: 250,
+                        width: 300,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
 
 
 
-
+          ///footer
           Container(
             height: 100,
             width: 100,
@@ -380,7 +599,7 @@ class _ourTeamState extends State<ourTeam> {
 
                 ),
                 Text(
-                 "We are a team of out-of-the-box thinkers, "
+                  "We are a team of out-of-the-box thinkers, "
                       "with deep expertise in analytics. "
                       "Our research aims to make sense of large amounts of data.",
                   textAlign: TextAlign.justify,
@@ -402,9 +621,7 @@ class _ourTeamState extends State<ourTeam> {
           ),
 
 
-
-
-       ///YOUTUBE,FB,GOOGLE SECTION
+          ///YOUTUBE,FB,GOOGLE SECTION
           Container(
             height: 50,
             width: 50,
@@ -452,8 +669,7 @@ class _ourTeamState extends State<ourTeam> {
             ),
           ),
 
-
-         ///SERVICES SECTION
+          ///SERVICES SECTION
 
           Container(
             height: 150,
@@ -529,7 +745,7 @@ class _ourTeamState extends State<ourTeam> {
               ],
             ),
           ),
-   ///Community
+          ///CONTACT US
           Container(
             height: 150,
             width: 300,
@@ -563,7 +779,9 @@ class _ourTeamState extends State<ourTeam> {
                   ),
                 ),
                 InkWell(
-                  onTap: () {
+                  onTap: () {Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Event()));
 
                   },
                   child: const Text(
@@ -592,7 +810,7 @@ class _ourTeamState extends State<ourTeam> {
             ),
           ),
 
-          ///CONTACT US
+
           Container(
             height: 150,
             width: 300,
@@ -700,15 +918,14 @@ class _ourTeamState extends State<ourTeam> {
                 ),
               ],
             ),
-          )
-
-
-          //PLACE THE BOTTOM NAVBAR HERE
-
+          ),
 
 
         ],
+
       ),
+
     );
+
   }
 }

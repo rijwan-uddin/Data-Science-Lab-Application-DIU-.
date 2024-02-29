@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'eventtimeline.dart';
-import 'upEvents.dart';
+
+
 class Event extends StatefulWidget {
   const Event({super.key});
 
@@ -13,7 +14,7 @@ class _EventState extends State<Event> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 32, 72, 149),
+     backgroundColor: const Color.fromARGB(255, 32, 72, 149),
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(50),
         child:  AppBar(
@@ -42,22 +43,27 @@ class _EventState extends State<Event> {
                 scale: 2,
               ),
             )
+
           ],
+
+  //write upcoming events here
         ),
       ),
 
       body: ListView(
-        children: [
 
+
+        children: [
           Container(
             child: Padding(
               padding: const EdgeInsets.all(0),
-
-              child:
-              Container(
+              child: Container(
                 height: 100,
-                width: 100,
-                color: const Color.fromARGB(255, 255, 255, 255),
+                width: 200, // Adjusted width to make it rectangular
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 255, 255, 255),
+                  borderRadius: BorderRadius.circular(0.0), // Adjust the radius to your preference
+                ),
                 child: Transform.translate(
                   offset: Offset(0.8 * 20, 0.8 * 20), // Adjust DPI to your actual device
                   child: const Text(
@@ -76,33 +82,27 @@ class _EventState extends State<Event> {
                     ),
                   ),
                 ),
-              )
-
+              ),
             ),
           ),
+
+
+
           // Add the curved shape container
+
           CurvedContainer(),
           ContainerWithLineevent(),
 
 
-
-
-
-
-
-
           SizedBox(height: 20.0),
-
-
-
 
           Container(
             height: 100,
             width: 100,
-            padding: const EdgeInsets.all(12.0),
+            padding: const EdgeInsets.all(10.0),
             decoration: const BoxDecoration(
+              color:const Color.fromARGB(255, 32, 72, 149),
 
-              color: Colors.white,
             ),
             child: Column(
               children: [
@@ -518,6 +518,8 @@ class CurvedContainer extends StatelessWidget {
   }
 }
 
+
+
 class CurvePainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
@@ -536,189 +538,3 @@ class CurvePainter extends CustomPainter {
     return false;
   }
 }
-
-
-
-
-
-
-
-
-/*
-class timeline extends StatefulWidget {
-  const timeline({super.key});
-
-  @override
-  State<timeline> createState() => _timelineState();
-}
-
-class _timelineState extends State<timeline> {
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-
-
-
-    );
-  }
-}*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-class _EventState extends State<Event> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-
-
-      backgroundColor: const Color.fromARGB(255, 32, 72, 149),
-      appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(50),
-        child: AppBar(
-          elevation: 0,
-          backgroundColor: const Color.fromARGB(255, 255, 255, 255),
-
-          actions: [
-            Image.asset(
-              'assets/ds.png',
-
-              height: 100,
-              width: 100,
-            ),
-            SizedBox(
-              width: MediaQuery.of(context).size.width /2,
-            ),
-            Image.asset(
-              "assets/diu.png",
-              height: 100,
-              width: 100,
-            ),
-            InkWell(
-              onTap: () {},
-              child: Image.asset(
-                "assets/notification.gif",
-                scale: 2,
-              ),
-            )
-          ],
-        ),
-      ),
-
-      body:ListView(
-          children: [
-      Container(
-      child: Padding(
-      padding: const EdgeInsets.all(0),
-      child: Container(
-
-        height: 100,
-        width: 100,
-        color: const Color.fromARGB(255, 255, 255, 255),
-
-
-
-        child: const Text(
-          'Upcoming Events',
-          textAlign: TextAlign.left,
-          style: TextStyle(
-            color: Colors.green,
-            shadows: [
-              Shadow(
-                color: Colors.black12,
-                blurRadius: 1.0,
-                offset: Offset(3.0, 3.0),
-              ),
-            ],
-            fontSize: 30,
-
-          ),
-        ),
-      ),
-    )
-    ),
-
-
-
-
-            Container(
-              height: MediaQuery.of(context).size.height, // Make the container height full screen
-              width: MediaQuery.of(context).size.width,   // Make the container width full screen
-              padding: const EdgeInsets.all(12.0),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(100.0),
-                color: const Color.fromARGB(255, 32, 72, 149),
-              ),
-              child: Stack(
-                children: [
-                  Center( // Center the image within the container
-                    child: Image.asset(
-                      'assets/v.png',
-                      width: MediaQuery.of(context).size.width - 24, // Adjust the width as needed
-                      height: MediaQuery.of(context).size.height - 24, // Adjust the height as needed
-                      fit: BoxFit.contain, // Make the image fit within the container
-                    ),
-                  ),
-                  const Center(
-                    child: Text(
-                        "Events In Our Data, "
-                            "Science Lab. ",
-                      style: TextStyle(
-                        fontFamily: "Allerta",
-                        color: Colors.black, // Text color
-                        fontSize: 25, // Adjust the font size as needed
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            )
-
-
-
-
-
-
-
-
-          ]
-      ),
-
-    );
-
-  }
-}  */
