@@ -337,15 +337,15 @@ class _ResearchAreaState extends State<ResearchArea> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const SizedBox(
-                        height: 150,
+                        height: 130,
                       ),
                       dataset(),
                       const SizedBox(
-                        height: 20,
+                        height: 10,
                       ),
                       catadata(),
                       const SizedBox(
-                        height: 20,
+                        height: 10,
                       ),
                       imadata(),
                       SizedBox(height: 20.0),
@@ -371,14 +371,14 @@ Widget Footer() {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const SizedBox(
-          height: 50,
+          height: 10,
         ),
         Image.asset(
           "assets/dsl.jpg",
           scale: 6,
         ),
         const SizedBox(
-          height: 20,
+          height: 10,
         ),
         const Text(
           "We are a team of out-of-the-box thinkers, with deep expertise in analytics. Our research aims to make sense of large amounts of data.",
@@ -386,7 +386,7 @@ Widget Footer() {
           textAlign: TextAlign.justify,
         ),
         const SizedBox(
-          height: 20,
+          height: 10,
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -415,7 +415,7 @@ Widget Footer() {
           ],
         ),
         const SizedBox(
-          height: 20,
+          height: 10,
         ),
         const Text(
           "Services",
@@ -423,22 +423,22 @@ Widget Footer() {
               fontSize: 25, color: Colors.white, fontWeight: FontWeight.bold),
         ),
         const SizedBox(
-          height: 20,
+          height: 10,
         ),
         const Text(
           "Data Science\nMachine Learning\nDeep Learning\nBig Data",
-          style: TextStyle(fontSize: 16, color: Colors.white),
+          style: TextStyle(fontSize: 14, color: Colors.white),
         ),
         SizedBox(
-          height: 18,
+          height: 10,
         ),
         const Text(
           "Community",
           style: TextStyle(
-              fontSize: 25, color: Colors.white, fontWeight: FontWeight.bold),
+              fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold),
         ),
         const SizedBox(
-          height: 20,
+          height: 10,
         ),
         const Text(
           "Our Service\nDocumentation\nWhat you do?",
@@ -450,14 +450,14 @@ Widget Footer() {
         const Text(
           "Contact Us",
           style: TextStyle(
-              fontSize: 25, color: Colors.white, fontWeight: FontWeight.bold),
+              fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold),
         ),
         const SizedBox(
-          height: 20,
+          height: 10,
         ),
         const Text(
           "Daffodil Smart City,Ashulia,Dhaka\nEmail:arman.swe@diu.edu.bd\nPhone:+880-167338289",
-          style: TextStyle(fontSize: 20, color: Colors.white),
+          style: TextStyle(fontSize: 14, color: Colors.white),
         ),
         const Divider(
           color: Colors.black,
