@@ -565,7 +565,7 @@ class _ourTeamState extends State<ourTeam> {
               ),
               SizedBox(height: 00), // Adjust the height of SizedBox to reduce the gap
               Container(
-                height: 600,
+                height: 500,
                 width: 450,
                 padding: const EdgeInsets.all(0),
                 decoration: BoxDecoration(
@@ -579,9 +579,9 @@ class _ourTeamState extends State<ourTeam> {
                     ClipRRect(
 
                       child: Image.asset(
-                        'assets/T2.jpeg',
+                        'assets/exp1.jpg',
                         width: 300,
-                        height: 240,
+                        height: 200,
                         //fit: BoxFit.cover,
                       ),
                     ),
@@ -589,7 +589,7 @@ class _ourTeamState extends State<ourTeam> {
                     ClipRRect(
 
                       child: Image.asset(
-                        'assets/T3.jpeg',
+                        'assets/exp.jpg',
                         width: 300,
                         height: 200,
                         //fit: BoxFit.cover,
@@ -600,11 +600,39 @@ class _ourTeamState extends State<ourTeam> {
               ),
             ],
           ),
+          SizedBox(height: 20.0),
+
+          Container(
+            height: 100,
+            width: 100,
+            padding: const EdgeInsets.all(10.0),
+            decoration: const BoxDecoration(
+              color:const Color.fromARGB(255, 32, 72, 149),
+
+            ),
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    Image.asset(
+                      'assets/dsl.jpg',
+                      width: 186,
+                      height:75,
+                      //fit: BoxFit.cover,
+                      //color: Color(0xFFE6E6EE), colorBlendMode: BlendMode.modulate,
+                      alignment: Alignment.center,
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
 
 
           HeaderContainer(),
           SocialMediaContainer(),
           ServicesContainer(),
+          CommunityContainer(),
           ContactContainer(),
           DividerContainer(),
           FooterContainer(),
@@ -897,6 +925,76 @@ class FooterContainer extends StatelessWidget {
             "Daffodil International University",
             style: TextStyle(
               fontSize: 14,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class CommunityContainer extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 150,
+      width: 300,
+      padding: const EdgeInsets.all(12.0),
+      decoration: const BoxDecoration(
+        color: Color.fromARGB(255, 32, 72, 149),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Text(
+            "Community",
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 24,
+              fontWeight: FontWeight.w400,
+            ),
+          ),
+          const SizedBox(height: 10),
+          InkWell(
+            onTap: () {
+              // Handle Our Services tap
+            },
+            child: const Text(
+              "Our Services",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 15,
+                fontWeight: FontWeight.w200,
+              ),
+            ),
+          ),
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Event()),
+              );
+            },
+            child: const Text(
+              "Documentation",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 15,
+                fontWeight: FontWeight.w200,
+              ),
+            ),
+          ),
+          InkWell(
+            onTap: () {
+              // Handle What We Do tap
+            },
+            child: const Text(
+              "What We Do?",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 15,
+                fontWeight: FontWeight.w200,
+              ),
             ),
           ),
         ],

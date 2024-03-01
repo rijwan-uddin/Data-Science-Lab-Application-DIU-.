@@ -70,7 +70,7 @@ flutter:
     - assets/sohelsir.jpg
     - assets/Touhidsir.jpg
     - assets/imransir.jpg
-    - assets/v.png
+    - assets/v.jpg
     - assets/F1.jpg
     - assets/F2.jpg
     - assets/F3.jpg
@@ -78,7 +78,12 @@ flutter:
     - assets/t1.jpg
     - assets/T2.jpeg
     - assets/T3.jpeg
-    - assets/vin.jpg
+    - assets/exp.jpg
+    - assets/dsl.jpg
+    - assets/exp1.jpg
+    - assets/res1.jpeg
+    - assets/res2.jpeg
+    - assets/res3.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

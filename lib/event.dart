@@ -79,7 +79,7 @@ class _EventState extends State<Event> {
                 child: Transform.translate(
                   offset: Offset(0.8 * 20, 0.8 * 20),
                   child: const Text(
-                    'Upcoming Events',
+                    'Events',
                     textAlign: TextAlign.left,
                     style: TextStyle(
                       color: Colors.white, // Change text color to contrast with gradient
@@ -123,7 +123,7 @@ class _EventState extends State<Event> {
                 Row(
                   children: [
                     Image.asset(
-                      'assets/ds.png',
+                      'assets/dsl.jpg',
                       width: 186,
                       height:75,
                       //fit: BoxFit.cover,
@@ -298,7 +298,8 @@ class _EventState extends State<Event> {
               ],
             ),
           ),
-          ///CONTACT US
+
+          ///community
           Container(
             height: 150,
             width: 300,
@@ -363,7 +364,7 @@ class _EventState extends State<Event> {
             ),
           ),
 
-
+          ///CONTACT US
           Container(
             height: 150,
             width: 300,

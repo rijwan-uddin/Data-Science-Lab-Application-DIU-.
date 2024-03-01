@@ -236,8 +236,8 @@ class ContainerWithLineevent extends StatelessWidget {
           width: 400,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10), // Added border radius
-            image: DecorationImage(
-              image: AssetImage('assets/vin.jpg'), // Replace 'assets/vin.jpg' with your vintage texture image path
+            image: const DecorationImage(
+              image: AssetImage('assets/v.jpg'), // Replace 'assets/vin.jpg' with your vintage texture image path
               fit: BoxFit.cover,
             ),
           ),

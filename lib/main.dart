@@ -54,6 +54,8 @@ fixed it will be set as Daffodil international university  authority wants.*/
 import 'package:flutter/material.dart';
 import 'event.dart';
 import 'ourteam.dart';
+import 'resource/customDesign.dart';
+import 'resource/resources.dart';
 
 void main() {
   runApp(MyApp());
@@ -82,7 +84,8 @@ class _HomePageState extends State<HomePage> {
 
   final List<Widget> _pages = [
     Event(),
-    ourTeam(),
+    ResearchArea(),
+   // ourTeam(),
   ];
 
   @override
