@@ -27,16 +27,16 @@ class _ourTeamState extends State<ourTeam> {
             Image.asset(
               'assets/ds.png',
 
-              height: 100,
-              width: 100,
+              height: 80,
+              width: 80,
             ),
             SizedBox(
               width: MediaQuery.of(context).size.width /2,
             ),
             Image.asset(
               "assets/diu.png",
-              height: 100,
-              width: 100,
+              height: 80,
+              width: 80,
             ),
             InkWell(
               onTap: () {},
@@ -339,8 +339,7 @@ class _ourTeamState extends State<ourTeam> {
               ),
             ),
           ),
-
-          Center(
+         Center(
             child: SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Container(
@@ -382,7 +381,7 @@ class _ourTeamState extends State<ourTeam> {
                                   ),
                                 ),
                                 const Text(
-                                  "Assistant Professor",
+                                  "Asst. Prof.",
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                     color: Colors.white,
@@ -395,7 +394,7 @@ class _ourTeamState extends State<ourTeam> {
                           ),
                           const SizedBox(width: 12),
                           SizedBox(
-                            width: 150,
+                            width: 140,
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
@@ -418,7 +417,7 @@ class _ourTeamState extends State<ourTeam> {
                                   ),
                                 ),
                                 const Text(
-                                  "Assistant Professor",
+                                  "Asst. Prof.",
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                     color: Colors.white,
@@ -458,7 +457,7 @@ class _ourTeamState extends State<ourTeam> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           SizedBox(
-                            width: 150, // Adjust width as needed
+                            width: 140, // Adjust width as needed
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
@@ -481,7 +480,7 @@ class _ourTeamState extends State<ourTeam> {
                                   ),
                                 ),
                                 const Text(
-                                  "Assistant Professor",
+                                  "Asst. Prof.",
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                     color: Colors.white,

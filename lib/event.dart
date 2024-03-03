@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'eventtimeline.dart';
+import 'ourteam.dart';
 
 
 class Event extends StatefulWidget {
@@ -15,40 +16,41 @@ class _EventState extends State<Event> {
   Widget build(BuildContext context) {
     return Scaffold(
      backgroundColor: const Color.fromARGB(255, 32, 72, 149),
-      appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(50),
-        child:  AppBar(
-          elevation: 0,
-          backgroundColor: const Color.fromARGB(255, 255, 255, 255),
-
-          actions: [
-            Image.asset(
-              'assets/ds.png',
-
-              height: 100,
-              width: 100,
-            ),
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
             SizedBox(
-              width: MediaQuery.of(context).size.width /2,
+              width: MediaQuery.of(context).size.width / 4,
+              child: Image.asset(
+                'assets/ds.png',
+                height: 40, // Adjust the height as needed
+                width: 40, // Adjust the width as needed
+              ),
             ),
-            Image.asset(
-              "assets/diu.png",
-              height: 100,
-              width: 100,
+            SizedBox(width: 100),
+            SizedBox(
+              width: MediaQuery.of(context).size.width / 4,
+              child: Image.asset(
+                "assets/diu.png",
+                height: 40, // Adjust the height as needed
+                width: 40, // Adjust the width as needed
+              ),
             ),
             InkWell(
               onTap: () {},
               child: Image.asset(
                 "assets/notification.gif",
-                scale: 2,
+                height: 40, // Adjust the height as needed
+                width: 40, // Adjust the width as needed
               ),
-            )
-
+            ),
           ],
-
-  //write upcoming events here
         ),
       ),
+
 
       body: ListView(
 
@@ -335,7 +337,7 @@ class _EventState extends State<Event> {
                 InkWell(
                   onTap: () {Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Event()));
+                      MaterialPageRoute(builder: (context) => ourTeam()));
 
                   },
                   child: const Text(

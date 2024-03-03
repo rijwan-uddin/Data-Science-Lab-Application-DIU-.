@@ -283,6 +283,11 @@ class ContainerWithLineevent extends StatelessWidget {
                 blurRadius: 8,
               ),
             ],
+            gradient: const LinearGradient(
+              begin: Alignment.bottomCenter,
+              end: Alignment.topCenter,
+              colors: [Colors.deepOrange, Colors.white], // Blue to white gradient
+            ),
 
 
           ),
@@ -348,6 +353,11 @@ class ContainerWithLineevent extends StatelessWidget {
                 blurRadius: 8,
               ),
             ],
+            gradient: const LinearGradient(
+              begin: Alignment.bottomCenter,
+              end: Alignment.topCenter,
+              colors: [Colors.lightBlue, Colors.white], // Blue to white gradient
+            ),
 
           ),
           child: const Column(
@@ -411,6 +421,11 @@ class ContainerWithLineevent extends StatelessWidget {
                 blurRadius: 8,
               ),
             ],
+            gradient: const LinearGradient(
+              begin: Alignment.bottomCenter,
+              end: Alignment.topCenter,
+              colors: [Colors.cyanAccent, Colors.white], // Blue to white gradient
+            ),
 
 
           ),
