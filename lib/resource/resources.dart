@@ -19,38 +19,38 @@ class _ResearchAreaState extends State<ResearchArea> {
     final deviceWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
-        actions: [
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.all(0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Image.asset(
-                    "assets/ds.png",
-                    scale: 8,
-                  ),
-                  Row(
-                    children: [
-                      Image.asset(
-                        "assets/diu.png",
-                        scale: 8,
-                      ),
-                      GestureDetector(
-                        onTap: () {},
-                        child: Image.asset(
-                          "assets/notification.gif",
-                          scale: 2,
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
+        elevation: 0,
+        backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            SizedBox(
+              width: MediaQuery.of(context).size.width / 4,
+              child: Image.asset(
+                'assets/ds.png',
+                height: 40, // Adjust the height as needed
+                width: 40, // Adjust the width as needed
               ),
             ),
-          ),
-        ],
+            SizedBox(width: 100),
+            SizedBox(
+              width: MediaQuery.of(context).size.width / 4,
+              child: Image.asset(
+                "assets/diu.png",
+                height: 40, // Adjust the height as needed
+                width: 40, // Adjust the width as needed
+              ),
+            ),
+            InkWell(
+              onTap: () {},
+              child: Image.asset(
+                "assets/notification.gif",
+                height: 40, // Adjust the height as needed
+                width: 40, // Adjust the width as needed
+              ),
+            ),
+          ],
+        ),
       ),
       body: SingleChildScrollView(
         child: Container(

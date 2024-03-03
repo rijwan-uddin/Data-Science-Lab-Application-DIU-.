@@ -19,34 +19,38 @@ class _ourTeamState extends State<ourTeam> {
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(50),
         child:  AppBar(
-
           elevation: 0,
           backgroundColor: const Color.fromARGB(255, 255, 255, 255),
-
-          actions: [
-            Image.asset(
-              'assets/ds.png',
-
-              height: 80,
-              width: 80,
-            ),
-            SizedBox(
-              width: MediaQuery.of(context).size.width /2,
-            ),
-            Image.asset(
-              "assets/diu.png",
-              height: 80,
-              width: 80,
-            ),
-            InkWell(
-              onTap: () {},
-              child: Image.asset(
-                "assets/notification.gif",
-                scale: 2,
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              SizedBox(
+                width: MediaQuery.of(context).size.width / 4,
+                child: Image.asset(
+                  'assets/ds.png',
+                  height: 40, // Adjust the height as needed
+                  width: 40, // Adjust the width as needed
+                ),
               ),
-            )
-          ],
-
+              SizedBox(width: 100),
+              SizedBox(
+                width: MediaQuery.of(context).size.width / 4,
+                child: Image.asset(
+                  "assets/diu.png",
+                  height: 40, // Adjust the height as needed
+                  width: 40, // Adjust the width as needed
+                ),
+              ),
+              InkWell(
+                onTap: () {},
+                child: Image.asset(
+                  "assets/notification.gif",
+                  height: 40, // Adjust the height as needed
+                  width: 40, // Adjust the width as needed
+                ),
+              ),
+            ],
+          ),
         ),
       ),
       body: ListView(
