@@ -32,7 +32,7 @@ class _ourTeamState extends State<ourTeam> {
                   width: 40, // Adjust the width as needed
                 ),
               ),
-              SizedBox(width: 100),
+              SizedBox(width: 60),
               SizedBox(
                 width: MediaQuery.of(context).size.width / 4,
                 child: Image.asset(
