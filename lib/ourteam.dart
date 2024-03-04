@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'event.dart';
 import 'dart:ui' as ui;
+import 'package:flutter/cupertino.dart';
 
 
 class ourTeam extends StatefulWidget {
