@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'eventtimeline.dart';
-import 'ourteam.dart';
+import '../team/ourteam.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/cupertino.dart';
 

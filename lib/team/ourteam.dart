@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'event.dart';
+import '../events/event.dart';
 import 'dart:ui' as ui;
 import 'package:flutter/cupertino.dart';
 

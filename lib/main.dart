@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
-import 'event.dart';
-import 'ourteam.dart';
+import 'events/event.dart';
+import 'team/ourteam.dart';
 import 'resource/customDesign.dart';
 import 'resource/resources.dart';
 
